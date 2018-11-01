@@ -106,6 +106,7 @@ class User extends BaseRestService
             $name = array_get($resource, $nameField);
             if (!empty($this->getPermissions())) {
                 $list[] = $name . '/';
+                $list[] = $name . '/*';
             }
         }
 
